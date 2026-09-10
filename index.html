@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Understanding Cancer</title>
+<meta name="description" content="A study app for cancer biology, written from open access research papers. Works offline, no accounts, no tracking.">
+<style>
+:root{
+  color-scheme:light;
+  --ground:#FFFCFA; --surface:#FFFFFF; --raise:#FFF2F5;
+  --ink:#1E1930; --muted:#5C5370; --faint:#8B819F;
+  --rule:#F0DFE6; --accent:#D8215A; --accent-deep:#A50C42;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --ground:#141020; --surface:#1C1730; --raise:#2A1F3C;
+    --ink:#F4F0FA; --muted:#BDB2D0; --faint:#8F84A5;
+    --rule:#332A47; --accent:#FF6D96; --accent-deep:#FF95B2;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",
+              Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:44rem; margin:0 auto; padding:0 22px 72px}
+header.top{
+  border-bottom:1px solid var(--rule); background:var(--surface);
+  padding:14px 0; margin-bottom:44px;
+}
+header.top .wrap{padding-bottom:0; display:flex; flex-wrap:wrap;
+                 align-items:center; gap:14px}
+.brand{display:flex; align-items:center; gap:11px; font-weight:700;
+       text-decoration:none; color:var(--ink); margin-right:auto}
+.brand svg{display:block; border-radius:9px}
+nav a{color:var(--muted); text-decoration:none; font-size:15px;
+      font-weight:600; margin-left:16px}
+nav a:hover, nav a:focus{color:var(--accent); text-decoration:underline}
+h1{font-size:2.1rem; line-height:1.2; margin:0 0 12px; letter-spacing:-.02em}
+h2{font-size:1.28rem; margin:44px 0 12px; letter-spacing:-.01em}
+h3{font-size:1.02rem; margin:26px 0 6px}
+p{margin:0 0 15px; color:var(--muted)}
+p.lead{font-size:1.12rem; color:var(--ink)}
+a{color:var(--accent)}
+ul{margin:0 0 15px; padding-left:20px; color:var(--muted)}
+li{margin-bottom:8px}
+li strong{color:var(--ink)}
+.courses{list-style:none; padding:0; counter-reset:c}
+.courses li{
+  counter-increment:c; position:relative; padding:12px 0 12px 42px;
+  border-bottom:1px solid var(--rule); margin:0;
+}
+.courses li::before{
+  content:counter(c); position:absolute; left:0; top:12px;
+  width:27px; height:27px; border-radius:50%; background:var(--raise);
+  color:var(--accent); font-size:13px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+}
+.courses b{display:block; color:var(--ink)}
+.courses span{font-size:15px}
+.note{
+  background:var(--surface); border:1px solid var(--rule);
+  border-left:4px solid var(--accent); border-radius:0 12px 12px 0;
+  padding:15px 17px; margin:0 0 15px;
+}
+.note p:last-child{margin-bottom:0}
+.stat{display:flex; flex-wrap:wrap; gap:10px; margin:0 0 15px; padding:0;
+      list-style:none}
+.stat li{
+  background:var(--surface); border:1px solid var(--rule); margin:0;
+  border-radius:999px; padding:7px 15px; font-size:14.5px; font-weight:600;
+  color:var(--ink);
+}
+footer.foot{
+  border-top:1px solid var(--rule); margin-top:56px; padding-top:22px;
+  font-size:14.5px; color:var(--faint);
+}
+footer.foot a{color:var(--faint)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D8215A"/><circle cx="68" cy="33.5" r="15.5" fill="#FFF4F7"/><circle cx="42" cy="56" r="23.5" fill="#FFF4F7"/><circle cx="68" cy="33.5" r="5.6" fill="#A8123C"/><circle cx="42" cy="56" r="8.5" fill="#A8123C"/></svg>
+     <span>Understanding Cancer</span></a>
+  <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+<main class="wrap">
+
+<h1>Cancer biology, from the papers up</h1>
+<p class="lead">A study app for anyone who needs to know cancer biology
+   properly: masters and undergraduate students, healthcare staff, and
+   people who would rather read the real thing than a summary of a
+   summary.</p>
+<ul class="stat">
+  <li>8 courses</li>
+  <li>371 slides</li>
+  <li>434 questions</li>
+  <li>Works offline</li>
+  <li>No accounts, no tracking</li>
+</ul>
+
+<h2>The courses</h2>
+<ol class="courses"><li><b>What Is Cancer</b><span>The fundamentals, from the ground up. Start here</span></li><li><b>The Hallmarks of Cancer</b><span>What every cancer must learn to do, and how the framework was built</span></li><li><b>The Body Clock, Aging and Cancer</b><span>Three fields that turned out to share the same machinery</span></li><li><b>How Cancer Is Studied</b><span>Organoids, liquid biopsy and single cells: how anybody knows any of it</span></li><li><b>Editing Genes</b><span>Reading, silencing and rewriting the genome, and what has reached patients</span></li><li><b>Cancer Immunology and Immunotherapy</b><span>Why the immune system misses cancer, and what the drugs actually do</span></li><li><b>Cancer Genomics</b><span>Reading a tumour genome, and how much of it anyone understands</span></li><li><b>Clinical Trials and Survival</b><span>How cancer evidence is made, and how to read it without being misled</span></li></ol>
+<p><b>What Is Cancer</b> is free and always will be. One purchase of £7.99 unlocks
+   the rest, once, with no subscription.</p>
+
+<h2>How it works</h2>
+<p>You read a course, and the app asks you about it later. Questions are
+   multiple choice wherever that can be done fairly: a glossary term shows
+   its definition and you pick the word, a diagram shows itself and you pick
+   what it is, and a gap fill takes a sentence you have already met and
+   removes one word from it.</p>
+<p>Every answer, right or wrong, then shows you what all four options meant,
+   so one question teaches four things. Get one wrong and the app names the
+   slide it came from and offers to open it.</p>
+<p>Spaced repetition decides what comes back and when. Answer quickly and it
+   waits longer; get it wrong and it returns sooner.</p>
+
+<h2>Built from research papers</h2>
+<p>Every course is written from open access research papers. Each figure is
+   drawn from numbers in the source, the papers are named on the first slide
+   of each course and open with one tap, and where a slide states standard
+   textbook material it says so.</p>
+<p>The app also searches Europe PMC, so you can find and read full papers
+   without a paywall or an institutional login.</p>
+
+<h2>Privacy, briefly</h2>
+<p>No accounts, no analytics, no tracking, no advertising. Your progress
+   stays on your device. Everything except the paper search works with no
+   network at all. The <a href="privacy.html">full policy</a> says the same
+   thing at greater length.</p>
+
+<h2>Getting it</h2>
+<p>Understanding Cancer is an iPhone app. If something is not working, the
+   <a href="support.html">support page</a> is the place to start.</p>
+
+<footer class="foot">
+  <p>Understanding Cancer is made by Samuel Johnston. Last updated
+     September 2026.</p>
+  <p>This is study material, not medical advice. Nothing in the app
+     describes how to diagnose, screen for or treat a cancer, and no figure
+     in it applies to an individual. Always speak to a doctor about your own
+     health.</p>
+</footer>
+</main>
+</body>
+</html>
